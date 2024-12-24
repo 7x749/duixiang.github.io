@@ -1,0 +1,62 @@
+html, body {
+  margin: 0;
+}
+
+html {
+  font-family: sans-serif;
+  height: 100%;
+}
+
+body {
+  overflow: hidden;
+  height: inherit;
+  background-color: black; /* 设置黑色背景 */
+}
+
+h1 {
+  font-size: 2rem;
+  letter-spacing: -1px;
+  position: absolute;
+  margin: 0;
+  top: -4px;
+  right: 5px;
+
+  color: transparent;
+  text-shadow: 0 0 4px white;
+}
+
+#toggle-music {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  z-index: 999;
+  background-color: transparent;
+  border: 1px solid white; /* 将边框宽度减小到1px */
+  color: white; /* 设置按钮文本颜色为白色 */
+  font-size: 1rem; /* 将字体大小减小到1rem */
+  cursor: pointer;
+  padding: 3px 6px; /* 减小内边距 */
+}
+
+#toggle-music:hover {
+  color: white; /* 确保悬停时文本颜色也是白色 */
+  border-color: #ccc; /* 悬停时边框颜色变浅 */
+}
+
+#toggle-music:active {
+  color: white; /* 确保激活时文本颜色也是白色 */
+  border-color: #999; /* 激活时边框颜色变深 */
+}
+
+#toggle-music.on::after {
+  content: '🔊';
+  font-size: 0.8rem; /* 减小伪元素的字体大小 */
+}
+#toggle-music.off::after {
+  content: '🔇';
+  font-size: 0.8rem; /* 减小伪元素的字体大小 */
+}
+
+#bg-music {
+  display: none;
+}
